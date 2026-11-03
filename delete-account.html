@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Deletion Request - SafeMove Express</title>
+  <style>
+    :root {
+      --primary: #0891b2;
+      --primary-dark: #0e7490;
+      --primary-light: #e0f9ff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --danger: #ef4444;
+      --danger-light: #fef2f2;
+      --danger-border: #fecaca;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+    .header {
+      border-bottom: 2px solid var(--primary-light);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .meta {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-top: 28px;
+      margin-bottom: 12px;
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+    }
+    p, ul, ol {
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    ul, ol {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    strong {
+      color: var(--text);
+    }
+    .method-card {
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .method-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tag {
+      background: var(--primary);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+    .email-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 20px;
+      background-color: var(--primary);
+      color: #ffffff !important;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .email-btn:hover {
+      background-color: var(--primary-dark);
+      text-decoration: none;
+    }
+    .warning-box {
+      background-color: var(--danger-light);
+      border: 1px solid var(--danger-border);
+      padding: 16px 20px;
+      border-radius: 12px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      color: #991b1b;
+    }
+    .warning-box strong {
+      color: #991b1b;
+    }
+    .contact-box {
+      background-color: var(--primary-light);
+      border: 1px solid #bae6fd;
+      padding: 16px 20px;
+      border-radius: 12px;
+      margin-top: 28px;
+    }
+    .contact-box strong {
+      color: var(--primary-dark);
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .nav-bar a {
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      background: #f1f5f9;
+      transition: all 0.2s ease;
+    }
+    .nav-bar a:hover, .nav-bar a.active {
+      background: var(--primary);
+      color: #ffffff;
+    }
+    .footer {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      margin-top: 36px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .footer a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">SAFEMOVE EXPRESS</div>
+      <h1>Account Deletion & Data Erasure Request</h1>
+      <div class="meta">Compliance with Google Play User Data Policy | SafeMove Customer App</div>
+      <div class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-conditions.html">Terms & Conditions</a>
+        <a href="delete-account.html" class="active">Account Deletion</a>
+      </div>
+    </div>
+
+    <p>SafeMove respects your right to privacy and data protection. In accordance with applicable data privacy laws and Google Play's User Data Policy, you have full authority to request the permanent deletion of your SafeMove account and all associated personal information.</p>
+
+    <h2>How to Request Account Deletion</h2>
+    <p>You can delete your account using either of the following two methods:</p>
+
+    <div class="method-card">
+      <div class="method-title">
+        <span class="tag">Method 1</span>
+        <span>Directly Within the SafeMove Mobile App (Instant)</span>
+      </div>
+      <p>If you have the SafeMove Customer app installed on your device, you can permanently delete your account immediately:</p>
+      <ol>
+        <li>Open the <strong>SafeMove</strong> app.</li>
+        <li>Go to <strong>Settings</strong> or tap your <strong>Profile</strong> tab.</li>
+        <li>Select <strong>Edit Profile</strong>.</li>
+        <li>Tap <strong>Delete Account</strong> at the bottom of the screen.</li>
+        <li>Confirm your selection to permanently erase your account and associated credentials.</li>
+      </ol>
+    </div>
+
+    <div class="method-card">
+      <div class="method-title">
+        <span class="tag">Method 2</span>
+        <span>Submit a Request via Web / Email (No App Required)</span>
+      </div>
+      <p>If you have uninstalled the app or cannot access your device, submit an account deletion request to our support team:</p>
+      <ul>
+        <li><strong>Recipient:</strong> <a href="mailto:support@safemoveexpress.com.kh?subject=SafeMove%20Account%20Deletion%20Request">support@safemoveexpress.com.kh</a></li>
+        <li><strong>Subject Line:</strong> <code>SafeMove Account Deletion Request</code></li>
+        <li><strong>Required Information:</strong>
+          <ul>
+            <li>Your registered mobile phone number (including country code, e.g. +855).</li>
+            <li>Your full name as registered in the app.</li>
+          </ul>
+        </li>
+      </ul>
+      <a class="email-btn" href="mailto:support@safemoveexpress.com.kh?subject=SafeMove%20Account%20Deletion%20Request&body=Hello%20SafeMove%20Support%2C%0A%0APlease%20permanently%20delete%20my%20SafeMove%20account%20and%20associated%20personal%20data.%0A%0ARegistered%20Phone%20Number%3A%20%0AFull%20Name%3A%20%0A%0AThank%20you.">Click Here to Send Deletion Email</a>
+    </div>
+
+    <div class="warning-box">
+      <strong>Important Notice:</strong> Once your account deletion request is processed, your account is permanently deactivated and cannot be restored. Any active bookings, loyalty points, or promotional vouchers associated with your account will be forfeited.
+    </div>
+
+    <h2>What Data Will Be Deleted?</h2>
+    <p>Upon verification and processing of your deletion request, the following information will be permanently removed from our active databases:</p>
+    <ul>
+      <li><strong>User Profile:</strong> Full name, registered phone number, email address, and profile picture.</li>
+      <li><strong>Authentication Records:</strong> Account password hashes, OAuth tokens, and session credentials.</li>
+      <li><strong>Saved Locations:</strong> Saved home, work, or favorite delivery and pickup addresses.</li>
+      <li><strong>Device Identifiers:</strong> Push notification tokens (FCM) and device registration IDs.</li>
+      <li><strong>Real-time Location Logs:</strong> Any transient GPS tracking history linked to your account.</li>
+    </ul>
+
+    <h2>Data Retention Policy</h2>
+    <p>Certain records may be retained in secure archives for a limited period in compliance with statutory obligations:</p>
+    <ul>
+      <li><strong>Financial & Tax Compliance:</strong> Completed order invoices, payment transaction receipts, and accounting records must be preserved for the minimum period mandated by applicable commercial and taxation laws.</li>
+      <li><strong>Dispute & Fraud Prevention:</strong> Minimal transaction logs may be retained solely to resolve ongoing disputes, chargebacks, or to prevent fraudulent misuse of the service.</li>
+    </ul>
+    <p>Retained records are strictly isolated, access-restricted, and never used for marketing or commercial purposes.</p>
+
+    <h2>Processing Timeline</h2>
+    <p>In-app deletion requests are processed immediately upon confirmation. Email deletion requests are verified and executed within <strong>7 business days</strong>. A confirmation email or SMS will be dispatched once the deletion is finalized.</p>
+
+    <h2>Contact Us</h2>
+    <div class="contact-box">
+      <p>For questions regarding your data privacy, account deletion, or personal data rights:</p>
+      <p><strong>Support Email:</strong> <a href="mailto:support@safemoveexpress.com.kh">support@safemoveexpress.com.kh</a></p>
+      <p><strong>Official Website:</strong> <a href="https://safemoveexpress.com.kh">https://safemoveexpress.com.kh</a></p>
+      <p><strong>Company:</strong> SafeMove Express Co., Ltd.</p>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 SafeMove Express Co., Ltd. All rights reserved.</p>
+      <p>
+        <a href="index.html">Home</a> &bull;
+        <a href="privacy-policy.html">Privacy Policy</a> &bull; 
+        <a href="terms-conditions.html">Terms & Conditions</a> &bull; 
+        <a href="delete-account.html">Account Deletion</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
+
